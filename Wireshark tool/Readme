@@ -1,1 +1,15 @@
+# Do the following:
+•	Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.
+•	Start up the Wireshark packet sniffer
+•	Enter the following URL into your browser
+    http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html
+    
+ ------------------------------------------------------------------------------------------------   
+Your browser should display the rather lengthy US Bill of Rights.
+•	Stop Wireshark packet capture, and enter “http” in the display-filter-specification window,
+    so that only captured HTTP messages will be displayed. 
+•	(Note:  If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-3 packet trace to answer the questions below; see footnote 1. This trace file was gathered while performing the steps above on one of the author’s computers.) 
+--------------------------------------------------------------------------------------------------
 
+# Record the Request and response that showed in Wireshark.
+1.	My browser send two HTTP GET request message, package numbers are 43984 and 44339
