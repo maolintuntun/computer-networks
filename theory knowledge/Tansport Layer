@@ -1,0 +1,19 @@
+** port number and socket
+UDP socket ---------------------------
+* a House: a process
+* Door: socket
+* Each process has 1 or n sockets
+* inside side of the door:  Application Layer(Application program) where we programmer can control
+* Outside side of the door: Transport Layer(when massage is pushed out of the door) 
+
+* the destination address attached on the packet has 2 information:
+1. IP addre of destination
+2. the Port No. of the socket on the destination
+
+
+
+
+
+------
+Application Layer
+P2P file distribution
