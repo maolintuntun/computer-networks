@@ -10,10 +10,20 @@ UDP socket ---------------------------
 1. IP addre of destination
 2. the Port No. of the socket on the destination
 
-
-
+端口号和套接字是两回事，不同的协议决定端口号不同
+HTTP的端口号    80
+FTP的端口号     21
+Telnet的端口号  23
+Mail server端口号 25
 
 
 ------
 Application Layer
 P2P file distribution
+
+vedio file is combined by pictures. 
+
+1 我们看youtube时候里面发生了什么？
+2 是什么决定了视频画质？
+3 网络快慢指的是 什么的速度？ 貌似是叫带宽？
+4 
