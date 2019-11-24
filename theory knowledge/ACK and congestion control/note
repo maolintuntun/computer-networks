@@ -1,0 +1,2 @@
+Why Flow Control?
+if a process read data slow and the sender send too much and too quick, the sender overflow the receiver buffer of this connnection
