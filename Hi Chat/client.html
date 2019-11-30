@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Node.js+webSocket 聊天室客户端</title>
+</head>
+<body>
+	 <h1>Hi Chat Tingge</h1>
+	 <!-- id 很重要 不能忘记填"text""btn" -->
+	 <textarea name="" id="text" cols="30" rows="10"></textarea>
+	 <button id="btn">Send</button>
+
+     <!-- 导入一个socket.io.min.js的依赖，这个模块要去网上找 -->
+	 <script type="text/javascript"
+	 src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+
+	 <!-- 第二个script -->
+
+	 <script type="text/javascript">
+	 	var socket = io.connect("/"); 
+	 	/*<!-- //连接的时候 服务器是console.log 用户进入房间 -->*/
+	 	  /*<!-- //socket只是一个变量，io是socket.min.js提供的实例
+	 //连接聊天室的io服务器 括号里填写io服务器的根地址 /斜杠是本地根目录 即本地根ws协议 --> */
+
+	 	/*接下来是发消息。要得到文本框内容才能发*/
+	 	var oText = document.getElementById("text"); 
+	 	var oBtn  = document.getElementById("btn");
+
+	 	oBtn.onclick = function(){
+	 		var mes = oText.value; //文本框的内容
+	 		if(!mes)
+	 		{
+
+	 			return;
+	 		}
+	 		//如果文本框内有内容，则发送消息去服务器
+	 		socket.send(mes);
+            //接下来去server那边接收一下 console.log(obj)
+
+	 		//发送完消息之后清空文本框的内容
+	 		oText.value = "";
+	 	}
+
+	 	socket.on("message",function(mes){  //如何广播？ 即如果监听到消息，就显示消息
+	 			console.log(mes); //直接output 服务端发送过来的消息
+	 			var div = document.createElement("div");
+	 			div.className = "mes";
+	 			div.innerText = mes;
+	 			document.body.appendChild(div);
+	 	})
+
+	 </script>
+	 
+</body>
+</html>
